@@ -1,13 +1,13 @@
-# domie
+# SimpleJsonRpc
 
-Simple DOM creator, WIP
+Simple JSON RPC client in JavaScript/NodeJS
 
 ## Installation
 
 Via npm on Node:
 
 ```
-npm install domie
+npm install simplejsonrpc
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ TBD
 
 ## References
 
-- [The HTML DOM Document Object](https://www.w3schools.com/jsref/dom_obj_document.asp)
+TBD
 
 ## Samples
 
@@ -24,14 +24,12 @@ TBD
 
 ## Versions
 
-- 0.0.1, published
-- 0.0.2, accessing attributes by index
-- 0.0.3, removeChild, insertBefore
+TBD
 
 ## Contribution
 
-Feel free to [file issues](https://github.com/ajlopez/domie) and submit
-[pull requests](https://github.com/ajlopez/domie/pulls) — contributions are
+Feel free to [file issues](https://github.com/ajlopez/SimpleJsonRpc) and submit
+[pull requests](https://github.com/ajlopez/SimpleJsonRpc/pulls) — contributions are
 welcome.
 
 If you submit a pull request, please be sure to add or update corresponding
