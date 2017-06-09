@@ -6,3 +6,13 @@ exports['sjr as object'] = function (test) {
 	test.equal(typeof sjr, 'object');
 };
 
+exports['sjr create client with dummy provider'] = function (test) {
+	var client = sjr.client({
+		rpc: function () {}
+	});
+	
+	test.ok(client);
+	test.equal(typeof client, 'object');
+	test.equal(typeof client.call, 'function');
+}
+
