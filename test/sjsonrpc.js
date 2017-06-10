@@ -14,7 +14,7 @@ exports['sjr create client with dummy provider'] = function (test) {
 	test.ok(client);
 	test.equal(typeof client, 'object');
 	test.equal(typeof client.call, 'function');
-}
+};
 
 exports['call dummy provider'] = function (test) {
 	test.async();
