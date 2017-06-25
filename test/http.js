@@ -57,6 +57,18 @@ exports['call http server'] = function (test) {
 	})
 };
 
+exports['call http server using string address'] = function (test) {
+	test.async();
+	
+	var client = sjr.client('http://localhost:3000');
+	
+	client.call('method', [1, 2 , 3], function (err, data) {
+		test.equal(err, null);
+		test.equal(data, 'Ok');
+		test.done();
+	})
+};
+
 exports['call http server unknown method'] = function (test) {
 	test.async();
 	
