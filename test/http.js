@@ -7,6 +7,8 @@ exports['start http server'] = function (test) {
 	
 	server = require('http').createServer(function (req, res) {		
 		if (req.method === 'POST') {
+			test.equal(req.headers['content-type'], 'application/json');
+			
 			var body = '';
 
 			req.on('data', function (data) {
