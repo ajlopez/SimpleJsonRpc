@@ -27,7 +27,7 @@ client.call(options.method, getArguments(options.arguments), function (err, data
 	if (err)
 		console.log('error', err);
 	else
-		console.log(data);
+		console.log(JSON.stringify(data, null, 4));
 });
 
 
