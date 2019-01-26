@@ -15,7 +15,7 @@
   },
   "main": "./lib/sjsonrpc.js",
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 8.0.0"
   },
   "scripts": {
     "test": "simpleunit -r ./test"
