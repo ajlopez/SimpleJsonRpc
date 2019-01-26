@@ -13,8 +13,9 @@ var options = simpleargs(process.argv.slice(2));
 function getArguments(args) {
 	if (!args || args.length === 0)
 		return [];
-		
-	return args.split(',');
+
+    console.dir(args);
+	return args.toString().split(',');
 }
 
 var client = sjr.client({

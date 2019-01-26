@@ -24,11 +24,12 @@ TBD
 
 ## Versions
 
-- 0.0.1: Published
+- 0.0.1: Initial version
 - 0.0.2: Using string address to create http provider
 - 0.0.3: Sending application/json as content type
 - 0.0.4: Support https as transport protocol
 - 0.0.5: Send raw transaction
+- 0.0.6: Support await/async
 
 ## About test using https
 
