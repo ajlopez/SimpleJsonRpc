@@ -1,17 +1,27 @@
-{ "name": "simplejsonrpc"
-, "description": "Simple JSON RPC client"
-, "keywords": [ "nodejs", "json", "jsonrpc", "rpc" ]
-, "version": "0.0.5"
-, "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
-, "repository": { "type": "git", "url": "git://github.com/ajlopez/SimpleJsonRpc.git" }
-, "main": "./lib/sjsonrpc.js"
-, "engines": { "node": ">= 0.12.0" }
-, "scripts": {
+{
+  "name": "simplejsonrpc",
+  "description": "Simple JSON RPC client",
+  "keywords": [
+    "nodejs",
+    "json",
+    "jsonrpc",
+    "rpc"
+  ],
+  "version": "0.0.5",
+  "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ajlopez/SimpleJsonRpc.git"
+  },
+  "main": "./lib/sjsonrpc.js",
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "scripts": {
     "test": "simpleunit -r ./test"
-  }
-, "dependencies": {
-  }
-, "devDependencies": {
-    "simpleunit": "0.0.7"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "simpleunit": "0.0.8"
   }
 }
