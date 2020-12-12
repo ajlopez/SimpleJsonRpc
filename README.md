@@ -31,7 +31,11 @@ TBD
 - 0.0.5: Send raw transaction
 - 0.0.6: Support await/async
 
-## About test using https
+## References
+
+- [Pure JavaScript Send POST Data Without a Form](https://stackoverflow.com/questions/6396101/pure-javascript-send-post-data-without-a-form)
+
+### About test using https
 
 - [Ignore invalid self-signed ssl certificate in node.js with https.request?](https://stackoverflow.com/questions/10888610/ignore-invalid-self-signed-ssl-certificate-in-node-js-with-https-request)
 - [OpenSSL Essentials: Working with SSL Certificates, Private Keys and CSRs](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)
