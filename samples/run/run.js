@@ -6,7 +6,9 @@ simpleargs
 	.define('p', 'port', 3000, 'Port number')
     .define('h', 'host', 'localhost', 'Host name/address')
     .define('m', 'method', '', 'Method')
-    .define('a', 'arguments', '', 'Arguments');
+    .define('a', 'arguments', '', 'Arguments')
+    .define('pr', 'protocol', 'http', 'Protocol')
+    .define('l', 'log', false, 'Log', { flag: true });
 	
 var options = simpleargs(process.argv.slice(2));
 
@@ -19,10 +21,12 @@ function getArguments(args) {
 }
 
 var client = sjr.client({
-	protocol: 'http',
+	protocol: options.protocol,
 	host: options.host,
 	port: options.port
 });
+
+client.setLog(options.log);
 
 client.call(options.method, getArguments(options.arguments), function (err, data) {
 	if (err)
