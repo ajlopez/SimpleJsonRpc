@@ -30,6 +30,7 @@ TBD
 - 0.0.4: Support https as transport protocol
 - 0.0.5: Send raw transaction
 - 0.0.6: Support await/async
+- 0.0.7: Log outgoing and incoming message
 
 ## References
 
