@@ -1,6 +1,6 @@
 
-var sjr = require('../..'); // require('simplejsonrpc');
-var simpleargs = require('simpleargs');
+const sjr = require('../..'); // require('simplejsonrpc');
+const simpleargs = require('simpleargs');
 
 simpleargs
 	.define('p', 'port', 3000, 'Port number')
@@ -10,21 +10,27 @@ simpleargs
     .define('pr', 'protocol', 'http', 'Protocol')
     .define('l', 'log', false, 'Log', { flag: true });
 	
-var options = simpleargs(process.argv.slice(2));
+const options = simpleargs(process.argv.slice(2));
 
 function getArguments(args) {
 	if (!args || args.length === 0)
 		return [];
 
     console.dir(args);
+    
 	return args.toString().split(',');
 }
 
-var client = sjr.client({
-	protocol: options.protocol,
-	host: options.host,
-	port: options.port
-});
+let client;
+
+if (options._ && options._.length)
+    client = sjr.client(options._[0]);
+else
+    client = sjr.client({
+        protocol: options.protocol,
+        host: options.host,
+        port: options.port
+    });
 
 client.setLog(options.log);
 
