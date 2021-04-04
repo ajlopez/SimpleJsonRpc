@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Simple JSON RPC!</title>
+    <link rel="stylesheet" href="./css/bulma.css">
+    <script src="./js/sjsonrpc.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Simple JSON RPC in the browser
+      </h1>
+      <p class="subtitle">
+        Using <strong>Bulma</strong>!
+      </p>
+      
+
+<div class="field">
+  <label class="label">URL</label>
+  <div class="control">
+    <input id="url" class="input" type="text" placeholder="Text input" value="https://public-node.testnet.rsk.co:443">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Method</label>
+  <div class="control">
+    <input id="method" class="input" type="text" value="eth_blockNumber">
+  </div>
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" onclick="doPost()">Submit</button>
+  </div>
+  <div class="control">
+    <button class="button is-link is-light">Cancel</button>
+  </div>
+</div>
+      
+    </div>
+  </section>
+<script>
+function doPost() {
+    const url = document.getElementById('url').value;
+    const method = document.getElementById('method').value;
+    
+    const client = simplejsonrpc.client(url);
+    
+    client.call(method, [], function (err, data) {
+        if (err)
+            alert(err);
+        else
+            alert(JSON.stringify(data, null, 4));
+    });
+}
+</script>  
+  </body>
+</html>
+
